@@ -1,0 +1,125 @@
+/* Basic reset for the navbar */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  
+  /* Navbar styles */
+  .navbar {
+    display: flex;
+    justify-content: flex-start;
+    margin-top:-20px;
+    padding-left: 290px;
+    align-items: center;
+    background-color: #ffffff;
+    width: 100%;
+  }
+  
+  .navbar a {
+    color: #ff3700;
+    padding: 10px;
+    text-decoration: none;
+    text-align: left;
+  }
+  
+  .navbar a:hover {
+    background-color: #ffffff;
+    color: black;
+  }
+  
+  /* Dropdown container */
+  .dropdown {
+    position: relative;
+  }
+  
+  .dropbtn {
+    background-color: #ffffff;
+    color: #ff3700;
+    padding: 14px 20px;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+  }
+  
+  /*Button hover effect*/
+  .dropbtn:hover {
+    background-color: #ddd;
+    color: black;
+  }
+  
+  /* Dropdown content (hidden by default) */
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #ffffff;
+    min-width: 135px;
+    margin-left: -5px;
+    padding-top: 10px;
+    border-radius: 5px;
+    z-index: 1;
+  }
+  
+  /* Dropdown links */
+  .dropdown-content a {
+    color: ff3700;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+  }
+
+  /*Keep hover effects on links*/
+  .dropdown-content a:hover {
+    background-color: #ffffff;
+    color: black;
+    border-radius: 5px;
+  }
+  
+  /* Show the dropdown content when the user clicks on the dropdown
+  .dropdown:hover .dropdown-content {
+    display: block;
+  }*/
+  
+  /* Show the dropdown content when 'show' class is added */
+.show {
+    display: block;
+  }
+
+  /* Align Webshop and Contact Us to the right */
+.navbar-right {
+    margin-left: auto; /* Push items to the right */
+    display: flex;  /* Display items horizontally */
+  }
+  
+  .navbar-right a {
+    padding: 10px;
+    margin-left: 10px; /* Space between the two links */
+  }
+
+  .orangeBox {
+    height: 150px; /* Height of the div */
+    width: 100%; /* Full width of the container */
+    background-color: #ff3700; /* Orange background */
+  }
+
+  .imagerow{
+    display:flex;
+  }
+
+  .imagelinks {
+    flex: 20%;
+    padding: 15px 5px;
+  }
+
+  .partners {
+    height: 150px; /* Height of the div */
+    width: 100%; /* Full width of the container */
+    background-color: #B0C395; /* Green background */
+  }
+
+  footer {
+    background-color: #ff3700;
+    padding:100px;
+
+}
