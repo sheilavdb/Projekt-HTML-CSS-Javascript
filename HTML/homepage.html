@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="HTML/CSS + Javascript project" />
+    <meta name="author" content="Sheila van den Bulk" />
+    <title>Document</title>
+    <link rel="stylesheet" href="/CSS/style1.css" />
+  </head>
+
+  <body>
+    <header>
+      <!-- Logo & Slogan -->
+      <div class="logo">
+        <img src="/ideas/Logo-Slogan.png" class="logo1" height="250px" alt="Logo and Slogan"/>
+        <img src="/ideas/Logo.png" class="logo2" height="250px" alt="Logo"/>
+      </div>
+      <!-- Navigation Bar -->
+      <div class="topnav" id="myTopnav">
+        <a href="#">Home</a>
+
+        <div class="dropdown">
+          <button class="dropbutton" onclick="toggleDropdown('dropdownMenu1')">
+            Online Sessions<i class="fa fa-caret-down"></i>
+          </button>
+          <div class="dropdown-content" id="dropdownMenu1">
+            <a href="#">Strength</a>
+            <a href="#">Nutrition</a>
+            <a href="#">Video Analysis</a>
+          </div>
+        </div>
+
+        <div class="dropdown">
+          <button class="dropbutton" onclick="toggleDropdown('dropdownMenu2')">
+            Training Sessions<i class="fa fa-caret-down"></i>
+          </button>
+          <div class="dropdown-content" id="dropdownMenu2">
+            <a href="#">Individual</a>
+            <a href="#">Group</a>
+            <a href="#">Camps</a>
+          </div>
+        </div>
+        <a href="#">About Us</a>
+        <a href="javascript:void(0);" class="icon" onclick="myFunction()"
+          >&#9776;</a
+        >
+        <!--Burger icon = &#9776; Empty link javascript:void(0); 
+        to not load a new page but to call the javascript function on click-->
+        <a
+          href="#"
+          class="split contact">Contact Us</a
+        >
+        <a href="#" class="split">Webshop</a>
+      </div>
+    </header>
+    <div class="orangeBox" style="width: 100%"></div>
+    <main>
+      <div class="imagerow">
+        <div class="imagelinks">
+          <img src="/images/img1.png" style="width: 100%" />
+        </div>
+        <div class="imagelinks">
+          <img src="/images/img2.png" style="width: 100%" />
+        </div>
+        <div class="imagelinks">
+          <img src="/images/img3.png" style="width: 100%" />
+        </div>
+        <div class="imagelinks">
+          <img src="/images/img4.png" style="width: 100%" />
+        </div>
+        <div class="imagelinks">
+          <img src="/images/img5.png" style="width: 100%" />
+        </div>
+      </div>
+    </main>
+    <section class="partners">
+      <h1 class="partners-h1">Partners:</h1>
+    </section>
+    <br />
+
+    <footer><p>2025. SVDB TRAINING. All rights reserved.</p></footer>
+    <script src="/Javascript/js1.js"></script>
+  </body>
+</html>

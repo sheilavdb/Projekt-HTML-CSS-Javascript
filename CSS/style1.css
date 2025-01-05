@@ -1,0 +1,244 @@
+/*General reset*/
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+/* Add a black background color to the top navigation */
+.topnav {
+    background-color: #ffffff;
+    overflow: hidden;
+    padding-left: 280px;
+    margin-top: -10px;
+  }
+
+  .logo1{
+    background-color: white;
+    position:relative;
+    z-index: -1;
+  }
+  .logo2 {
+    display: none;
+  }
+
+  /* Style the links inside the navigation bar */
+  .topnav a {
+    float: left;
+    display: block;
+    color: #ff3700;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 14px;
+  }
+  
+  /* Hide the link that should open and close the topnav on small screens */
+  .topnav .icon {
+    display: none;
+  }
+  
+  /* Dropdown container - needed to position the dropdown content */
+  .dropdown {
+    float: left;
+    overflow: hidden;
+  }
+  
+  /* Style the dropdown button to fit inside the topnav */
+  .dropdown .dropbutton {
+    font-size: 17px;
+    border: none;
+    outline: none;
+    background-color: white;
+    color: #ff3700;
+    padding: 14px 16px;
+    width: 160px;
+    font-size: 14px;
+    margin: 0;
+  }
+  
+  /* Style the dropdown content (hidden by default) */
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    border-radius: 0px;
+    width: 160px;
+    overflow: auto;
+  }
+  
+  /* Style the links inside the dropdown */
+  .dropdown-content a {
+    float: none;
+    color: #ff3700;
+    background-color: #ffffff;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    padding-left: 25px;
+    text-align: left;
+  }
+  
+  /* Add a background on topnav links and the dropdown button on hover */
+  .topnav a:hover, .dropdown:hover .dropbutton, .topnav a.split:hover {
+    background-color: #e1e1e1;
+    color: #ff3700;
+    cursor: pointer;
+  }
+  
+  /* Add a grey background to dropdown links on click */
+  .dropdown-content {
+    background-color: #e1e1e1;
+    color: #ff3700;
+  }
+  
+  /* Hide the dropdown menu  */
+  .dropdown:hover .dropdown-content {
+    display: none;
+  }
+  
+  /* When the screen is less than 1000 pixels wide, 
+  hide all links, except for the first one ("Home"). Show the 
+  link that contains should open and close the topnav (.icon) */
+  @media screen and (max-width: 1000px) {
+
+    .topnav {
+      background-color: #ffffff;
+      margin-top: 0;
+      padding: 0 10px;
+      display: flex;
+      justify-content: space-between;
+      position: relative; /* Ensure it stays below the logo */
+    }
+    .topnav.responsive {
+      flex-direction: column; /* Stack items vertically in responsive mode */
+    }
+
+    .topnav a:not(:first-child), .dropdown .dropbutton {
+      display: none;
+    }
+    .topnav a.icon {
+      float: right;
+      display: block;
+    }    
+
+
+  }
+  /*Change logo on smaller screen*/
+  @media screen and (max-width: 720px) {
+  .logo1{
+    display:none;
+  }
+  .logo2{
+    display: block;
+    margin: 0 auto;
+    text-align: center;
+  }
+  .topnav {
+    background-color: #ffffff;
+    margin-top: 0;
+    padding: 0 10px;
+    display: flex;
+    justify-content: space-between;
+    position: relative; /* Ensure it stays below the logo */
+  }
+  
+  .topnav a:first-child {
+    margin-left: 0; /* Override any existing margin */
+    flex-grow: 1;
+    text-align: left;
+  }
+  
+  /* Ensure the burger menu icon is aligned to the right */
+  .topnav a.icon {
+    margin-right: 0; /* Override any existing margin */
+  }
+  
+  .topnav.responsive {
+    flex-direction: column; /* Stack items vertically in responsive mode */
+  }
+  
+  .topnav.responsive a {
+    display: block;
+    text-align: left;
+  }
+  
+  .topnav.responsive a.icon {
+    text-align: right;
+  }
+
+  }
+  /* The "responsive" class is added to the topnav with JavaScript 
+  when the user clicks on the icon. This class makes the topnav 
+  look good on small screens */
+  @media screen and (max-width: 1000px) {
+    .topnav.responsive {position: relative;}
+    .topnav.responsive a.icon {
+      position: absolute;
+      right: 0;
+      top: 0;
+    }
+    .topnav.responsive a {
+      float: none;
+      display: block;
+      text-align: left;
+    }
+    .topnav.responsive .dropdown {float: none;}
+    .topnav.responsive .dropdown-content {
+        position: relative; 
+        background-color: #e1e1e1;
+    }
+    .topnav.responsive .dropdown .dropbutton {
+      display: block;
+      width: 100%;
+      text-align: left;
+    }
+  }
+
+  /* Create a right-aligned (split) link inside the navigation bar */
+.topnav a.split {
+    float: right;
+    color: #ff3700;
+    background-color: #ffffff;
+    padding: 14px 16px;
+  }
+
+   /* Contact Us and Webshop should behave like regular menu items under the burger menu */
+   .topnav.responsive a.split {
+    float: none;
+    text-align: left; /* Align them under the burger menu */
+}
+
+.orangeBox {
+  height: 150px; /* Height of the div */
+  width: 100%; /* Full width of the container */
+  background-color: #ff3700; /* Orange background */
+}
+
+
+.imagerow{
+  display:flex;
+}
+
+.imagelinks {
+  flex: 20%;
+  padding: 15px 5px;
+}
+
+.partners {
+  height: 150px; /* Height of the div */
+  width: 100%; /* Full width of the container */
+  background-color: #B0C395; /* Green background */
+}
+
+h1 {
+  text-align: center;
+  color: #ffffff;
+  font-size: 1.5rem;
+  padding:20px;
+}
+
+footer {
+  background-color: #ff3700;
+  padding: 100px;
+}
