@@ -6,22 +6,22 @@
   font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
+.logo1{
+  background-color: white;
+  position:relative;
+  z-index: -1;
+}
+.logo2 {
+  display: none;
+}
+
 /* Add a black background color to the top navigation */
 .topnav {
     background-color: #ffffff;
     overflow: hidden;
     padding-left: 280px;
     margin-top: -10px;
-  }
-
-  .logo1{
-    background-color: white;
-    position:relative;
-    z-index: -1;
-  }
-  .logo2 {
-    display: none;
-  }
+  }  
 
   /* Style the links inside the navigation bar */
   .topnav a {
@@ -110,6 +110,7 @@
       justify-content: space-between;
       position: relative; /* Ensure it stays below the logo */
     }
+
     .topnav.responsive {
       flex-direction: column; /* Stack items vertically in responsive mode */
     }
@@ -117,11 +118,16 @@
     .topnav a:not(:first-child), .dropdown .dropbutton {
       display: none;
     }
+
+    /*Burger Icon float to right*/
     .topnav a.icon {
       float: right;
       display: block;
     }    
-
+    /*Orange box made thinner on smaller screen*/
+    .orangeBox{
+  max-height: 80px;
+}
 
   }
   /*Change logo on smaller screen*/
@@ -147,6 +153,7 @@
     margin-left: 0; /* Override any existing margin */
     flex-grow: 1;
     text-align: left;
+  /*  max-width: fit-content;                                                HELP!!! If I add this here my dropdown also changes*/
   }
   
   /* Ensure the burger menu icon is aligned to the right */
@@ -165,6 +172,13 @@
   
   .topnav.responsive a.icon {
     text-align: right;
+  }
+  /*Shows the imagelinks under eachother, want them in columns of 2*/
+  .imagerow{
+    width: 50vw;
+    display:flex;
+    flex-direction: column;
+    flex-wrap: wrap;                                                                 /*DOESNT WORK, why????????????????????*/
   }
 
   }
