@@ -124,9 +124,10 @@
       float: right;
       display: block;
     }    
+
     /*Orange box made thinner on smaller screen*/
     .orangeBox{
-  max-height: 80px;
+    max-height: 80px;
 }
 
   }
@@ -162,7 +163,7 @@
   }
   
   .topnav.responsive {
-    flex-direction: column; /* Stack items vertically in responsive mode */
+    flex-direction: row; /* Stack items vertically in responsive mode */
   }
   
   .topnav.responsive a {
@@ -175,9 +176,9 @@
   }
   /*Shows the imagelinks under eachother, want them in columns of 2*/
   .imagerow{
-    width: 50vw;
+
     display:flex;
-    flex-direction: column;
+    flex-direction: row;
     flex-wrap: wrap;                                                                 /*DOESNT WORK, why????????????????????*/
   }
 
@@ -186,6 +187,10 @@
   when the user clicks on the icon. This class makes the topnav 
   look good on small screens */
   @media screen and (max-width: 1000px) {
+    .topnav.responsive a.split {
+      float: none;
+      text-align: left; /* Align them under the burger menu */
+  }
     .topnav.responsive {position: relative;}
     .topnav.responsive a.icon {
       position: absolute;
@@ -197,7 +202,10 @@
       display: block;
       text-align: left;
     }
-    .topnav.responsive .dropdown {float: none;}
+       /* Contact Us and Webshop should behave like regular menu items under the burger menu */
+    .topnav.responsive .dropdown {
+      float: none;}
+      
     .topnav.responsive .dropdown-content {
         position: relative; 
         background-color: #e1e1e1;
@@ -209,7 +217,7 @@
     }
   }
 
-  /* Create a right-aligned (split) link inside the navigation bar */
+  /* Create a right-aligned (split) link inside the navigation bar, move above responsiveness */
 .topnav a.split {
     float: right;
     color: #ff3700;
@@ -217,11 +225,6 @@
     padding: 14px 16px;
   }
 
-   /* Contact Us and Webshop should behave like regular menu items under the burger menu */
-   .topnav.responsive a.split {
-    float: none;
-    text-align: left; /* Align them under the burger menu */
-}
 
 .orangeBox {
   height: 150px; /* Height of the div */
@@ -235,7 +238,7 @@
 }
 
 .imagelinks {
-  flex: 20%;
+  width: 20%;                                                         /*Change from % to px to adjust the positioning*/
   padding: 15px 5px;
 }
 
