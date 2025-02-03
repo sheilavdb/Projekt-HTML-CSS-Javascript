@@ -14,11 +14,11 @@ function myFunction() {
     const dropdowns = document.querySelectorAll('.dropdown-content');
     
     // Close all dropdowns except the one being clicked
-    dropdowns.forEach(dropdown => {
-        if (dropdown.id !== id) {
-            dropdown.style.display = 'none';
+    for (let i = 0; i < dropdowns.length; i++) {
+        if (dropdowns[i].id !== id) {
+            dropdowns[i].style.display = 'none';
         }
-    });
+    }
 
     // Toggle the visibility of the clicked dropdown
     const dropdown = document.getElementById(id);
@@ -29,12 +29,34 @@ function myFunction() {
     }
 }
 
-// Optional: Close dropdowns when clicking outside
+// Close dropdowns when clicking somewhere
 window.onclick = function(event) {
     if (!event.target.matches('.dropbutton')) {
         const dropdowns = document.querySelectorAll('.dropdown-content');
-        dropdowns.forEach(dropdown => {
-            dropdown.style.display = 'none';
-        });
+        for (let i = 0; i < dropdowns.length; i++) {
+            dropdowns[i].style.display = 'none';
+        }
     }
 };
+
+//Contactform
+      //If checkbox is checked, the questionsection is hidden and the bookingSection is not hidden. Else the bookingSession remains hidden
+      const bookingCheckbox = document.getElementById("bookingCheckbox");
+      const bookingSection = document.getElementById("bookingSection");
+      const questionSection = document.getElementById("questionSection");
+
+      bookingCheckbox.addEventListener("change", () => {
+        if (bookingCheckbox.checked) {
+          bookingSection.classList.remove("hidden");
+          questionSection.classList.add("hidden");
+        } else {
+          bookingSection.classList.add("hidden");
+          questionSection.classList.remove("hidden");
+        }
+      });
+
+      //Handle form submission (optional: for testing purposes)
+      document.getElementById("contactForm").addEventListener("submit", (e) => {
+        e.preventDefault(); //prevent website to reload
+        alert("Thank you! We will get back at you as soon as we can!");
+      });

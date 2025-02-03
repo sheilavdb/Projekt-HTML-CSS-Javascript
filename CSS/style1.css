@@ -5,17 +5,18 @@
   box-sizing: border-box;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
-
+/*Logo for big screens*/
 .logo1{
   background-color: white;
   position:relative;
   z-index: -1;
 }
+/*Logo for mobile*/
 .logo2 {
   display: none;
 }
 
-/* Add a black background color to the top navigation */
+/* Add a background color to the top navigation */
 .topnav {
     background-color: #ffffff;
     overflow: hidden;
@@ -102,6 +103,11 @@
   link that contains should open and close the topnav (.icon) */
   @media screen and (max-width: 1000px) {
 
+    .logo1{
+      width: 100%;
+      height: auto;
+    }
+
     .topnav {
       background-color: #ffffff;
       margin-top: 0;
@@ -162,10 +168,6 @@
     margin-right: 0; /* Override any existing margin */
   }
   
-  .topnav.responsive {
-    flex-direction: row; /* Stack items vertically in responsive mode */
-  }
-  
   .topnav.responsive a {
     display: block;
     text-align: left;
@@ -174,18 +176,27 @@
   .topnav.responsive a.icon {
     text-align: right;
   }
-  /*Shows the imagelinks under eachother, want them in columns of 2*/
+  /*HOMEPAGE Shows the imagelinks under eachother, 3 images upper row, 2 images under*/
   .imagerow{
-
     display:flex;
     flex-direction: row;
-    flex-wrap: wrap;                                                                 /*DOESNT WORK, why????????????????????*/
+    flex-wrap: wrap; 
+    justify-content: center;                                                                
   }
 
+    .imagelinks {
+      width: 144px;    
+      padding: 15px 5px;
+    }
+
+    div#imageField{
+      display: none;
+    }
   }
+
+  
   /* The "responsive" class is added to the topnav with JavaScript 
-  when the user clicks on the icon. This class makes the topnav 
-  look good on small screens */
+  when the user clicks on the icon. */
   @media screen and (max-width: 1000px) {
     .topnav.responsive a.split {
       float: none;
@@ -232,16 +243,22 @@
   background-color: #ff3700; /* Orange background */
 }
 
-
+/*HOMEPAGE*/
 .imagerow{
   display:flex;
 }
 
 .imagelinks {
-  width: 20%;                                                         /*Change from % to px to adjust the positioning*/
+  width: 20%;
+  min-width: 144px;                                                       /*Change from % to px to adjust the positioning*/
   padding: 15px 5px;
+  margin: auto;
 }
 
+.imagelinks:hover{
+opacity: 0.5;
+}
+/*Partners section*/
 .partners {
   height: 150px; /* Height of the div */
   width: 100%; /* Full width of the container */
@@ -259,3 +276,52 @@ footer {
   background-color: #ff3700;
   padding: 100px;
 }
+
+/*CONTACT US PAGE*/
+
+#contactForm{
+  display:flex;
+  justify-content: center;
+  align-items: center;
+}
+form {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  width: 800px;
+}
+
+div#inputField{
+  height: 550px;
+  width: 400px;
+  text-align: center;
+  margin: 50px 0px 50px 0px;
+  border-left: #212f22 dashed 2px;
+  border-bottom: #212f22 dashed 2px;
+  background-color: #B0C395;
+}
+
+div#imageField{
+  height: 550px;
+  text-align: center;
+  justify-content: center;
+}
+
+input:not(#bookingCheckbox), textarea, select {  /*checkbox for booking is excluded*/
+  padding: 5px;
+  border-radius: 5px;
+  width: 80%; /* HELP, THIS MOVES MY CHECKBOX TO THE MIDDLE OF THE INPUTFIELD. How to put the checkbox input + label centered again (exclude just this line from this group) */
+}
+
+ button{
+  padding: 5px;
+  border-radius: 5px;
+  width: 80%;
+  background-color: #212f22;
+  color: white;
+ }
+
+.hidden {
+  display: none;
+}
+
