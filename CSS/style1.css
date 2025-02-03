@@ -250,7 +250,7 @@
 
 .imagelinks {
   width: 20%;
-  min-width: 144px;                                                       /*Change from % to px to adjust the positioning*/
+  min-width: 144px;                                                    
   padding: 15px 5px;
   margin: auto;
 }
@@ -260,8 +260,8 @@ opacity: 0.5;
 }
 /*Partners section*/
 .partners {
-  height: 150px; /* Height of the div */
-  width: 100%; /* Full width of the container */
+  height: 150px; 
+  width: 100%; 
   background-color: #B0C395; /* Green background */
 }
 
@@ -310,7 +310,7 @@ div#imageField{
 input:not(#bookingCheckbox), textarea, select {  /*checkbox for booking is excluded*/
   padding: 5px;
   border-radius: 5px;
-  width: 80%; /* HELP, THIS MOVES MY CHECKBOX TO THE MIDDLE OF THE INPUTFIELD. How to put the checkbox input + label centered again (exclude just this line from this group) */
+  width: 80%; 
 }
 
  button{
