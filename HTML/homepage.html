@@ -5,8 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="description" content="HTML/CSS + Javascript project" />
     <meta name="author" content="Sheila van den Bulk" />
-    <title>Be a Gamechanger</title>
+      <title>Be a Gamechanger</title>
     <link rel="stylesheet" href="/CSS/style1.css" />
+    <script src="https://kit.fontawesome.com/90c186d35b.js" crossorigin="anonymous"></script>
   </head>
 
   <body>
@@ -22,32 +23,32 @@
 
         <div class="dropdown">
           <button class="dropbutton" onclick="toggleDropdown('dropdownMenu1')">
-            Online Sessions<i class="fa fa-caret-down"></i>
+            Online Sessions
           </button>
           <div class="dropdown-content" id="dropdownMenu1">
-            <a href="#">Strength</a>
-            <a href="#">Nutrition</a>
-            <a href="#">Video Analysis</a>
+            <a href="strengthProgram.html">Strength</a>
+            <a href="nutritionProgram.html">Nutrition</a>
+            <a href="videoAnalysis.html">Video Analysis</a>
           </div>
         </div>
 
         <div class="dropdown">
           <button class="dropbutton" onclick="toggleDropdown('dropdownMenu2')">
-            Training Sessions<i class="fa fa-caret-down"></i>
+            Training Sessions
           </button>
           <div class="dropdown-content" id="dropdownMenu2">
-            <a href="#">Individual</a>
-            <a href="#">Group</a>
-            <a href="#">Camps</a>
+            <a href="individualTraining.html">Individual</a>
+            <a href="groupTraining.html">Group</a>
+            <a href="campsTraining.html">Camps</a>
           </div>
         </div>
-        <a href="#">About Us</a>
+        <a href="aboutUs.html">About Us</a>
         <a href="javascript:void(0);" class="icon" onclick="myFunction()"
           >&#9776;</a>
         <!--Burger icon = &#9776; Empty link javascript:void(0); 
         to not load a new page but to call the javascript function on click-->
         
-        <a href="#" style="background-color: #212f22; color: white" class="split contact">Contact Us</a>
+        <a href="contactUs.html" style="background-color: #212f22; color: white" class="split contact">Contact Us</a>
         <a href="webshop.html" class="split">Webshop</a>
       </div>
     </header>
@@ -55,33 +56,54 @@
     <div class="orangeBox"></div>
     <main>
       <p id="imagetextheader" style="color: black; font-size: 28px; font-weight: bold; text-align: center; padding-top: 10px;">OUR MOST BOOKED SERVICES:</p>
-                                  <!--HEB IK DIV's NODIG OF KAN IK DIRECT A TAGS GEBRUIKEN MET DE CLASS IMAGELINKS??????-->
+      <br>
       <div class="imagerow">
         <div class="imagelinks">
-          <img src="/images/img1.png" style="width: 100%" />
+          <img src="/images/img1.png" class="image" style="width: 100%" /></a>
+          <div class="imageOverlay"><a href="videoAnalysis.html" class="imageAnchor">Video Analysis</a></div>
         </div>
         <div class="imagelinks">
-          <img src="/images/img2.png" style="width: 100%" />
-        </div>
-       <!--Deze foto is al een link, div box overheen leggen die donker wordt bij hover--> 
-        <div class="imagelinks">
-          <a href="nutritionProgram.html"><img src="/images/img3.png" class="image" style="width: 100%" /></a>
-          <div class="overlay"></div>
+          <img src="/images/img2.png" class="image" style="width: 100%" /></a>
+          <div class="imageOverlay"><a href="individualTraining.html" class="imageAnchor">Individual Training</a></div>
         </div>
         <div class="imagelinks">
-          <img src="/images/img4.png" style="width: 100%" />
+          <img src="/images/img4.png" class="image" style="width: 100%" /></a>
+          <div class="imageOverlay"><a href="campsTraining.html" class="imageAnchor">Camps</a></div>
         </div>
         <div class="imagelinks">
-          <img src="/images/img5.png" style="width: 100%" />
+          <img src="/images/img5.png" class="image" style="width: 100%" /></a>
+          <div class="imageOverlay"><a href="strengthProgram.html" class="imageAnchor">Strength</a></div>
         </div>
       </div>
     </main>
+    <br>
     <section class="partners">
       <h1 class="partners-h1">Partners:</h1>
+      <div id="partnerBox">
+        <img src="/images/football-is-everywhere.png" style="height:75px;">
+        <img src="/images/knvbLogo.png" style="height: 75px;">
+        <img src="/images/adidas-white-logo-hd-png-701751694777208ogwssxbgpj.png" style="height: 75px;">
+      </div>
     </section>
     <br />
-
-    <footer><p>2025. SVDB TRAINING. All rights reserved.</p></footer>
+  <footer>
+      <div class="footer-container">
+        <div class="contact-info">
+              <h3>Want to partner up?</h3>
+              <p>Email: <a href="mailto:sheilavdb@gmail.com" class="emailTo">sheilavdb@gmail.com</a></p>
+              <p>Phone: +46 720 836 0446</p>
+        </div>
+        <div class="privacy">
+          <p>© 2025 Sheila van den Bulk | All rights reserved</p>
+        </div>
+        <div class="social-media">
+          <a href="https://www.facebook.com" class="social-icon"><i class="fa-brands fa-facebook"></i></a> <!-- MAKE THIS WORK!!!!!!!!!!!!!!!!-->
+          <a href="https://www.instagram.com/sheilavdb" class="social-icon"><i class="fa-brands fa-instagram"></i></a>
+          <a href="https://www.linkedin.com/" class="social-icon"><i class="fa-brands fa-linkedin"></i></a>
+          <a href="https://www.github.com/sheilavdb" class="social-icon"><i class="fa-brands fa-github"></i></a>
+        </div>
+      </div>
+  </footer>
     <script src="/Javascript/js1.js"></script>
   </body>
 </html>
