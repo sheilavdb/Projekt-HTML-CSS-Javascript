@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="HTML/CSS + Javascript project" />
+    <meta name="author" content="Sheila van den Bulk" />
+      <title>Be a Gamechanger</title>
+    <link rel="stylesheet" href="/CSS/style1.css" />
+    <script src="https://kit.fontawesome.com/90c186d35b.js" crossorigin="anonymous"></script>
+  </head>
+
+  <body>
+    <header>
+      <!-- Logo & Slogan -->
+      <div class="logo">
+        <img src="/ideas/Logo-Slogan.png" class="logo1" height="250px" alt="Logo and Slogan"/>
+        <img src="/ideas/Logo.png" class="logo2" height="250px" alt="Logo"/>
+      </div>
+      <!-- Navigation Bar -->
+      <div class="topnav" id="myTopnav">
+        <a href="index.html">Home</a>
+
+        <div class="dropdown">
+          <button class="dropbutton" onclick="toggleDropdown('dropdownMenu1')">
+            Online Sessions
+          </button>
+          <div class="dropdown-content" id="dropdownMenu1">
+            <a href="strengthProgram.html">Strength</a>
+            <a href="nutritionProgram.html">Nutrition</a>
+            <a href="videoAnalysis.html">Video Analysis</a>
+          </div>
+        </div>
+
+        <div class="dropdown">
+          <button class="dropbutton" onclick="toggleDropdown('dropdownMenu2')">
+            Training Sessions
+          </button>
+          <div class="dropdown-content" id="dropdownMenu2">
+            <a href="individualTraining.html">Individual</a>
+            <a href="groupTraining.html">Group</a>
+            <a href="campsTraining.html">Camps</a>
+          </div>
+        </div>
+        <a href="aboutUs.html">About Us</a>
+        <a href="javascript:void(0);" class="icon" onclick="myFunction()"
+          >&#9776;</a>
+        <!--Burger icon = &#9776; Empty link javascript:void(0); 
+        to not load a new page but to call the javascript function on click-->
+        
+        <a href="contactUs.html" style="background-color: #212f22; color: white" class="split contact">Contact Us</a>
+        <a href="webshop.html" class="split">Webshop</a>
+      </div>
+    </header>
+    <!--End of navigation bar-->
+    <div class="orangeBox"></div>
+    <main>
+    <br>
+        <iframe width="1120" height="630" src="https://www.youtube.com/embed/UObjZW0TOHw?si=5EASoaLXQBWZpd_F" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen=""></iframe>    </main>
+    <br>
+    <section class="partners">
+      <h1 class="partners-h1">Partners:</h1>
+      <div id="partnerBox">
+        <img src="/images/football-is-everywhere.png" style="height:75px;">
+        <img src="/images/knvbLogo.png" style="height: 75px;">
+        <img src="/images/adidas-white-logo-hd-png-701751694777208ogwssxbgpj.png" style="height: 75px;">
+      </div>
+    </section>
+    <br />
+  <footer>
+      <div class="footer-container">
+        <div class="contact-info">
+              <h3>Want to partner up?</h3>
+              <p>Email: <a href="mailto:sheilavdb@gmail.com" class="emailTo">sheilavdb@gmail.com</a></p>
+              <p>Phone: +46 720 836 0446</p>
+        </div>
+        <div class="privacy">
+          <p>© 2025 Sheila van den Bulk | All rights reserved</p>
+        </div>
+        <div class="social-media">
+          <a href="https://www.facebook.com" class="social-icon"><i class="fa-brands fa-facebook"></i></a> <!-- MAKE THIS WORK!!!!!!!!!!!!!!!!-->
+          <a href="https://www.instagram.com/sheilavdb" class="social-icon"><i class="fa-brands fa-instagram"></i></a>
+          <a href="https://www.linkedin.com/in/sheila-van-den-bulk-a5622a206/" class="social-icon"><i class="fa-brands fa-linkedin"></i></a>
+          <a href="https://www.github.com/sheilavdb" class="social-icon"><i class="fa-brands fa-github"></i></a>
+        </div>
+      </div>
+  </footer>
+    <script src="/Javascript/js1.js"></script>
+  </body>
+</html>
