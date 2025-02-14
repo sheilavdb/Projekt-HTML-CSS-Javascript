@@ -190,6 +190,10 @@
       text-align: left;
       width: fit-content;
     }
+    
+    iframe{
+      width: 100%vw !important;
+    }
 
   }
 
@@ -247,6 +251,10 @@
   /*Responsiveness contactform: picture not visible*/
       div#imageField{
         display: none;
+      }
+
+      #partnerBox{
+        gap: 25px !important;
       }
     }
 
@@ -512,6 +520,10 @@ p.aboutP{
   transform: scale(1.06);
   transition-duration: 0.5s;
 }
+.BIOimage{
+  height: 250px;
+  width: auto;
+}
 
 .IMAGE{
   width: 200px;
@@ -534,15 +546,36 @@ p.aboutP{
 
 @media screen and (max-width: 950px) {
   .IMAGE{
-    width: 150px;
-    height: 150px;
+    width: 100px;
+    height: 100px;
   }
+
   p.aboutP{
     font-size: 11px;
+  }
+  .BIOimage{
+    height: 175px;
+    width: auto;
   }
 
 }
 
+@media screen and (max-width:450px) {
+  div#inputField{
+    width: 350px;
+  }
+  
+  .IMAGE {
+    width: 80px;
+    height:auto;
+  }
+  h1.aboutUsHead{
+    font-size: 12px;
+  }
+  p.aboutP{
+    font-size: 7px;
+  }
+}
 
 
 /*End of about me page*/
