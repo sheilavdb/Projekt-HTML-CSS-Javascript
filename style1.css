@@ -191,10 +191,6 @@
       width: fit-content;
     }
     
-    iframe{
-      width: 100%vw !important;
-    }
-
   }
 
   /*Change logo on smaller screen*/
@@ -358,10 +354,12 @@ footer {
   max-width: 100%;
   margin: auto;
   padding: 0 15px;
+  gap:10px;
 }
 
 .contact-info h3 {
   margin-bottom: 20px;
+  font-size: 16px;
 }
 
 .emailTo{
@@ -375,7 +373,7 @@ footer {
 
 .social-media {
   display: flex;
-  gap: 25px;
+  gap: 15px;
 }
 
 .social-icon {
@@ -554,8 +552,14 @@ p.aboutP{
     font-size: 11px;
   }
   .BIOimage{
-    height: 175px;
+    height: 160px;
     width: auto;
+  }
+  iframe{
+    width: 90vw;
+    height: 50vw;
+    text-align: center;
+    margin: 20px;
   }
 
 }
@@ -564,18 +568,39 @@ p.aboutP{
   div#inputField{
     width: 350px;
   }
+
+  div#aboutUs{
+    gap: 7px;
+  }
   
   .IMAGE {
-    width: 80px;
-    height:auto;
+    width: 70px;
+    height: auto;
+    border-radius: 5px;
   }
   h1.aboutUsHead{
     font-size: 12px;
   }
+
+ h1.aboutUsHead:first-child {
+    height: 30px;
+  }
+
   p.aboutP{
     font-size: 7px;
   }
+  iframe{
+    width: 90vw;
+    height: 50vw;
+    text-align: center;
+    margin: 20px;
+  }
 }
-
-
 /*End of about me page*/
+
+iframe{
+  width: 90vw;
+  height: 50vw;
+  text-align: center;
+  margin: 20px;
+}
