@@ -9,18 +9,18 @@ function myFunction() {
     }
   }
   
-  function toggleDropdown(id) {
-    // Get all dropdowns
+  function toggleDropdown(id) {   //function works only for the inputted id
+    // Collect all element with class "dropdown-content"
     const dropdowns = document.querySelectorAll('.dropdown-content');
     
-    // Close all dropdowns except the one being clicked
+    // Changes display to none to all dropdowns except the one being clicked
     for (let i = 0; i < dropdowns.length; i++) {
         if (dropdowns[i].id !== id) {
             dropdowns[i].style.display = 'none';
         }
     }
 
-    // Toggle the visibility of the clicked dropdown
+    // Toggle the visibility of the clicked dropdown 
     const dropdown = document.getElementById(id);
     if (dropdown.style.display === 'block') {
         dropdown.style.display = 'none';
@@ -29,7 +29,7 @@ function myFunction() {
     }
 }
 
-// Close dropdowns when clicking somewhere
+// Close dropdowns when clicking somewhere on window (event.target.matches checks if clicked element has class "dropbutton")
 window.onclick = function(event) {
     if (!event.target.matches('.dropbutton')) {
         const dropdowns = document.querySelectorAll('.dropdown-content');
@@ -55,7 +55,7 @@ window.onclick = function(event) {
         }
       });
 
-      //Handle form submission (optional: for testing purposes)
+      //Handle form submission
       document.getElementById("contactForm").addEventListener("submit", (e) => {
         e.preventDefault(); //prevent website to reload
         alert("Thank you! We will get back at you as soon as we can!");
